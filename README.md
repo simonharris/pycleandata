@@ -1,5 +1,5 @@
 # cleandata
 
-Retrieve and clean datasets.
+Retrieve and clean datasets for use in machine learning experiments.
 
 
