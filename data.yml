@@ -1,0 +1,13 @@
+# Default YAML file
+
+iris:
+    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+    label_col: -1
+
+wbco:
+    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data
+    id_col: 0
+    label_col: -1
+    cleaner: SuperCleaner
+    
+    
