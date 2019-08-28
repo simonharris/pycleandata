@@ -1,2 +1,2 @@
 go:
-	python workhorse.py
+	@python workhorse.py
