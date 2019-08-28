@@ -1,5 +1,9 @@
 # Default YAML file
 
+
+avilatr:
+    data_url: ./offline_data/avila-tr.txt
+
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 
