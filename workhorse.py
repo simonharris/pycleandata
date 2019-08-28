@@ -20,7 +20,7 @@ DATA_DIR='./cd_data/'
 def import_dataset(key, conf):
     """The actual stuff"""
     
-    print(conf['data_url'])
+    print(key.upper())
 
     newdir = DATA_DIR + key
     os.makedirs(newdir, exist_ok=True)

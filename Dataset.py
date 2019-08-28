@@ -40,6 +40,7 @@ class Dataset:
             urllib.request.urlretrieve(self._config['data_url'], cache_file)
 
         import_args = self._fetch_import_args()
+        
         self._ds = pd.read_csv(cache_file, **import_args)
 
         # TODO: handle errors
@@ -50,6 +51,8 @@ class Dataset:
         """Data cleaning and label management"""  
         
         self._info['samples_pre'] = self._ds.shape[0]
+        
+        #print(self._ds)
         
         # Drop rows with missing data (TODO: make this more configurable?)
         self._ds = self._ds.dropna()
@@ -62,7 +65,7 @@ class Dataset:
         else:
             lc = self._ds.shape[1]-1
         
-        self._labels, _ = pd.factorize(self._ds.iloc[:,lc])
+        self._labels, _ = pd.factorize(self._ds[lc])
         self._info['labels'] = len(np.unique(self._labels))
         self._ds = self._ds.drop(lc, axis=1)
 
@@ -83,16 +86,19 @@ class Dataset:
        
     def _fetch_import_args(self):
         """Build a dict from the config file"""
-    
-        to_get = [
-            'na_values',
-            'index_col',
-        ]
-        
+
+        # Set up some defaults
         kwargs = {
             'header':None,
             'index_col':False,
         }
+        
+        # Then supplement or override them if they're in the config
+        to_get = [
+            'header',
+            'index_col',
+            'na_values',
+        ]
         
         if 'import_args' in self._config:
             for setting in to_get:

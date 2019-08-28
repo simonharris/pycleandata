@@ -3,6 +3,14 @@
 avilatr:
     data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/avila-tr.txt
 
+brtiss:
+    # source: https://archive.ics.uci.edu/ml/datasets/Breast+Tissue
+    data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/BreastTissue.csv
+    import_args:
+        header: !!int "0"
+        index_col: !!int "0"
+    label_col: !!str "Class"
+
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
 
