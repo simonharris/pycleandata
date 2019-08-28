@@ -2,7 +2,9 @@
 Python file
 """
 
+
 import os
+import sys
 import yaml
 
 import pandas as pd
@@ -23,7 +25,7 @@ def import_dataset(key, conf):
     newdir = DATA_DIR + key
     os.makedirs(newdir, exist_ok=True)
 
-    ds = Dataset(conf)
+    ds = Dataset(key, conf)
     
     # try/catch etc
     if (ds.fetch() and ds.process()): #DefaultCleaner(), DefaultLabeller())):
@@ -36,13 +38,22 @@ def import_dataset(key, conf):
         
  
 if __name__ == "__main__": 
+
+    dst = None
+
+    # TODO: this is kind of hacky
+    if len(sys.argv) > 1:
+        dst = sys.argv[1]
         
     with open("data.yml", 'r') as stream:
         try:
             cnf = yaml.load(stream, Loader=yaml.SafeLoader)
-        
-            for dst in cnf:
-                import_dataset(dst, cnf[dst])
+    
+            if dst is not None:
+                import_dataset(dst, cnf[dst])          
+            else:             
+                for dst in cnf:
+                    import_dataset(dst, cnf[dst])
 
         except yaml.YAMLError as exc:
             print(exc)
