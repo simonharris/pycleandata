@@ -1,5 +1,5 @@
 """
-Some docs
+Main dataset processor
 """
 
 import os
@@ -12,7 +12,8 @@ import pandas as pd
 class Dataset:
 
     
-    INT_FORMAT = '%1i'
+    FORMAT_INT = '%i'
+    FORMAT_FLT = '%f'
     CACHE_DIR = './_cache/'
 
 
@@ -38,10 +39,9 @@ class Dataset:
         
         
     def process(self): #, cleaner, labeller):
-   
-    
-        # TODO: make this more configurable
-        # Drop rows with missing data
+        """Data cleaning and label management"""  
+        
+        # Drop rows with missing data (TODO: make this more configurable?)
         self._ds = self._ds.dropna()
   
         # Assume we always have labels...for now
@@ -58,11 +58,10 @@ class Dataset:
         
     def save_all(self, location):
         """Save data files to disk"""
-    
-        np.savetxt(location + '/labels.csv', self._labels, fmt=self.INT_FORMAT)
-        np.savetxt(location + '/data.csv', self._ds, delimiter=',', fmt=self.INT_FORMAT)
-        # TODO: info.txt or similar
-       
+        
+        # TODO: may need to handle other formats for output data     
+        np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
+        np.savetxt(location + '/data.csv', self._ds, fmt=self.FORMAT_FLT, delimiter=',')
         print("SAVED ALL TO:", location, "\n") 
 
        
