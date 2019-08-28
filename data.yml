@@ -2,12 +2,11 @@
 
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
-    label_col: -1
 
 wbco:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data
-    id_col: 0
-    label_col: -1
-    cleaner: SuperCleaner
-    
-    
+    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data
+    import_args:
+        na_values:
+        - '?'
+        index_col: !!int "0"
+     

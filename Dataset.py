@@ -5,7 +5,7 @@ Some docs
 import numpy as np
 import pandas as pd
 
-from cleaners import DefaultCleaner
+#from cleaners import DefaultCleaner
 
 
 class Dataset:
@@ -20,48 +20,61 @@ class Dataset:
     
     # Throws etc
     def fetch(self):
+   
+        import_args = self._fetch_import_args()
+        
+        #print(import_args)
     
-        self._ds = pd.read_csv(self._config['data_url'], names=[], na_values=['?'])
+        self._ds = pd.read_csv(self._config['data_url'], **import_args)
+                                    #header=None, 
+                                    #index_col=0,
+                                    #na_values=['?'])
+        return True
+            
+        # TODO: does it throw exceptions?    
+        
+        
+    def process(self): #, cleaner, labeller):
+   
+    
+        # TODO: make this more configurable
+        # Drop rows with missing data
+        self._ds = self._ds.dropna()
+  
+        # Assume it's always the last column...for now
+        self._labels, _ = pd.factorize(self._ds.iloc[:,-1])
+        self._ds = self._ds.iloc[:, :-1]
 
         return True
         
         
-    def process(self, cleaner, labeller):
-    
-    
-    
-        self._the_data = cleaner.clean(self._ds)
-        self._the_labels = labeller.label(self._ds)
-        
-    
-        return True;
-        '''
-        self._data, self._labels = cleaner.clean(
-
-        # Lose the ID column
-        ds = ds.drop('SCN', axis=1)
-
-        # Drop rows with missing data
-        ds = ds.dropna()
-
-        # Convert the 2/4 labels to 1/0 and move to another dataframe
-        labels = ds.loc[:,'Class'].values > 3
-        ds = ds.drop('Class', axis=1)
-        '''
-        
-        
     def save_all(self, location):
+        """Save data files to disk"""
     
-        labels = [1, 2, 3]
-        data = [2, 3, 4]
-    
-        np.savetxt(location + '/labels.csv', labels, fmt=self.INT_FORMAT)
-        np.savetxt(location + '/data.csv', data, fmt=self.INT_FORMAT, delimiter=',')
+        np.savetxt(location + '/labels.csv', self._labels, fmt=self.INT_FORMAT)
+        np.savetxt(location + '/data.csv', self._ds, delimiter=',')
         # TODO: info.txt or similar
        
-        print("I DONE SAVED ALL TO:", location) 
+        print("SAVED ALL TO:", location, "\n") 
 
+       
+    def _fetch_import_args(self):
+        """Build a dict from the config file"""
+    
+        to_get = [
+            'na_values',
+            'index_col',
+        ]
         
- 
+        kwargs = {
+            'header':None,
+            'index_col':False, # TODO: may be more often true
+        }
         
+        if 'import_args' in self._config:
+            for setting in to_get:
+                if setting in self._config['import_args']:
+                    kwargs[setting] = self._config['import_args'][setting]
+            
+        return kwargs    
         

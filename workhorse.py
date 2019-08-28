@@ -8,8 +8,8 @@ import yaml
 import pandas as pd
 
 from Dataset import Dataset
-from cleaners.DefaultCleaner import DefaultCleaner
-from labellers.DefaultLabeller import DefaultLabeller
+#from cleaners.DefaultCleaner import DefaultCleaner
+#from labellers.DefaultLabeller import DefaultLabeller
 
 
 DATA_DIR='./cd_data/'
@@ -26,17 +26,10 @@ def import_dataset(key, conf):
     ds = Dataset(conf)
     
     # try/catch etc
-    if (ds.fetch() 
-            and ds.process(DefaultCleaner(), DefaultLabeller())):
-        ds.save_all(newdir)
-        print("YAY :)")
-        
+    if (ds.fetch() and ds.process()): #DefaultCleaner(), DefaultLabeller())):
+        ds.save_all(newdir)        
     else:
-        print("NAY :(")
-
-
-def save_dataset(foo):
-    print(foo)  
+        print("ERROR")
 
         
 ## Main method -----------------------------------------------------------------
@@ -52,9 +45,8 @@ if __name__ == "__main__":
                 import_dataset(dst, cnf[dst])
 
         except yaml.YAMLError as exc:
-            pass
-            #print(exc)
+            print(exc)
         
     
-    #print("Done")
+    print("Done")
 
