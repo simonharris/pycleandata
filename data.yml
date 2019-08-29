@@ -7,9 +7,9 @@ brtiss:
     # source: https://archive.ics.uci.edu/ml/datasets/Breast+Tissue
     data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/BreastTissue.csv
     import_args:
-        header: !!int "0"
-        index_col: !!int "0"
-    label_col: !!str "Class"
+        header: 0
+        index_col: 0
+    label_col: "Class"
 
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
@@ -19,7 +19,7 @@ wbco:
     import_args:
         na_values:
         - '?'
-        index_col: !!int "0"
+        index_col: 0
      
 wine:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data
