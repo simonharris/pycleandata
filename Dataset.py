@@ -2,7 +2,7 @@
 Main dataset processor
 """
 
-import os
+from os.path import isfile
 from pprint import pprint
 import urllib.request
 
@@ -41,7 +41,7 @@ class Dataset:
 
         cache_file = self.CACHE_DIR + self._key
 
-        if not os.path.isfile(cache_file):
+        if not isfile(cache_file):
             urllib.request.urlretrieve(self._config['data_url'], cache_file)
 
         import_args = self._fetch_import_args()
@@ -58,7 +58,7 @@ class Dataset:
 
         self._info['samples_pre'] = self._ds.shape[0]
 
-        #debug(self._ds)
+        debug(self._ds)
 
         # Drop rows with missing data (TODO: make this more configurable?)
         self._ds = self._ds.dropna()
@@ -123,6 +123,7 @@ class Dataset:
             'header',
             'index_col',
             'na_values',
+            'names',
             'sep',
             'usecols',
         ]
