@@ -93,11 +93,16 @@ class Dataset:
             for col in export_args['dropcols']:
                 self._ds = self._ds.drop(col, axis=1)
 
+        if 'format' in export_args:
+            fmt = export_args['format']
+        else:
+            fmt = self.FORMAT_FLT
+
         #debug(self._ds)
 
         # TODO: may need to handle other formats for output data
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
-        np.savetxt(location + '/data.csv', self._ds, fmt=self.FORMAT_FLT, delimiter=',')
+        np.savetxt(location + '/data.csv', self._ds, fmt=fmt, delimiter=',')
 
         pprint(self._info)
 

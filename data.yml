@@ -44,6 +44,8 @@ musk:
 
 optdigits:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra
+    export_args:
+        format: '%i'
 
 pageblocks:
     # source: https://archive.ics.uci.edu/ml/datasets/Page+Blocks+Classification
