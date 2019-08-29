@@ -10,6 +10,13 @@ import numpy as np
 import pandas as pd
 
 
+DEBUG=True
+DEBUG=False
+
+def debug(data):
+    if DEBUG:
+        print(data)
+
 class Dataset:
 
     
@@ -40,6 +47,7 @@ class Dataset:
             urllib.request.urlretrieve(self._config['data_url'], cache_file)
 
         import_args = self._fetch_import_args()
+        debug(import_args)
         
         self._ds = pd.read_csv(cache_file, **import_args)
 
@@ -52,7 +60,7 @@ class Dataset:
         
         self._info['samples_pre'] = self._ds.shape[0]
         
-        #print(self._ds)
+        #debug(self._ds)
         
         # Drop rows with missing data (TODO: make this more configurable?)
         self._ds = self._ds.dropna()
@@ -74,6 +82,8 @@ class Dataset:
         
     def save_all(self, location):
         """Save data files to disk"""
+        
+        debug(self._ds)
         
         # TODO: may need to handle other formats for output data     
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
@@ -98,6 +108,8 @@ class Dataset:
             'header',
             'index_col',
             'na_values',
+            'sep',
+            'usecols',
         ]
         
         if 'import_args' in self._config:
