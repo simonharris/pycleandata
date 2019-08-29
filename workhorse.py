@@ -9,7 +9,7 @@ import yaml
 from Dataset import Dataset
 
 
-DATA_DIR='./cd_data/'
+DATA_DIR = './cd_data/'
 
 
 def import_dataset(key, conf):
@@ -23,13 +23,13 @@ def import_dataset(key, conf):
     ds = Dataset(key, conf)
 
     # try/catch etc
-    if (ds.fetch() and ds.process()): #DefaultCleaner(), DefaultLabeller())):
+    if (ds.fetch() and ds.process()):
         ds.save_all(newdir)
     else:
         print("ERROR")
 
 
-## Main method -----------------------------------------------------------------
+# Main method -----------------------------------------------------------------
 
 
 if __name__ == "__main__":

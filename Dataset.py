@@ -10,8 +10,9 @@ import numpy as np
 import pandas as pd
 
 
-DEBUG=True
-DEBUG=False
+DEBUG = True
+DEBUG = False
+
 
 def debug(data):
     if DEBUG:
@@ -98,8 +99,6 @@ class Dataset:
         else:
             fmt = self.FORMAT_FLT
 
-        #debug(self._ds)
-
         # TODO: may need to handle other formats for output data
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
         np.savetxt(location + '/data.csv', self._ds, fmt=fmt, delimiter=',')
@@ -114,8 +113,8 @@ class Dataset:
 
         # Set up some defaults
         kwargs = {
-            'header':None,
-            'index_col':False,
+            'header': None,
+            'index_col': False,
         }
 
         # Then supplement or override them if they're in the config
