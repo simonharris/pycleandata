@@ -1,17 +1,12 @@
 """
-Python file
+Main script for importing databases to cleandata
 """
-
 
 import os
 import sys
 import yaml
 
-import pandas as pd
-
 from Dataset import Dataset
-#from cleaners.DefaultCleaner import DefaultCleaner
-#from labellers.DefaultLabeller import DefaultLabeller
 
 
 DATA_DIR='./cd_data/'
@@ -57,7 +52,6 @@ if __name__ == "__main__":
 
         except yaml.YAMLError as exc:
             print(exc)
-        
-    
+            
     print("Done")
 
