@@ -51,6 +51,11 @@ pageblocks:
     # source: https://archive.ics.uci.edu/ml/datasets/Page+Blocks+Classification
     data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/PageBlocks.csv
 
+pendigits:
+    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra
+    export_args:
+        format: '%i'
+
 wbco:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data
     import_args:
