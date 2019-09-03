@@ -82,3 +82,10 @@ wbco:
 wine:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data
     label_col: 0
+
+wineq_red:
+    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+    import_args:
+        header: 0
+        sep: ";"
+    label_col: "quality"
