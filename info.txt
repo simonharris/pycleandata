@@ -1,0 +1,127 @@
+AVILATR
+{'labels': 12,
+ 'samples_post': 10430,
+ 'samples_pre': 10430,
+ 'url': 'https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/AvilaTR.csv'}
+SAVED ALL TO: ./cd_data/avilatr 
+
+BLOODTRANS
+{'labels': 2,
+ 'samples_post': 748,
+ 'samples_pre': 748,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/blood-transfusion/transfusion.data'}
+SAVED ALL TO: ./cd_data/bloodtrans 
+
+BRTISS
+{'labels': 6,
+ 'samples_post': 106,
+ 'samples_pre': 106,
+ 'url': 'https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/BreastTissue.csv'}
+SAVED ALL TO: ./cd_data/brtiss 
+
+ECOLI
+{'labels': 8,
+ 'samples_post': 336,
+ 'samples_pre': 336,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/ecoli/ecoli.data'}
+SAVED ALL TO: ./cd_data/ecoli 
+
+GLASS
+{'labels': 6,
+ 'samples_post': 214,
+ 'samples_pre': 214,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/glass/glass.data'}
+SAVED ALL TO: ./cd_data/glass 
+
+HABERMAN
+{'labels': 2,
+ 'samples_post': 306,
+ 'samples_pre': 306,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/haberman/haberman.data'}
+SAVED ALL TO: ./cd_data/haberman 
+
+IONOSPHERE
+{'labels': 2,
+ 'samples_post': 351,
+ 'samples_pre': 351,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/ionosphere/ionosphere.data'}
+SAVED ALL TO: ./cd_data/ionosphere 
+
+IRIS
+{'labels': 3,
+ 'samples_post': 150,
+ 'samples_pre': 150,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'}
+SAVED ALL TO: ./cd_data/iris 
+
+ISOLET
+{'labels': 26,
+ 'samples_post': 6238,
+ 'samples_pre': 6238,
+ 'url': 'https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Isolet1234.csv'}
+SAVED ALL TO: ./cd_data/isolet 
+
+LETTERREC
+{'labels': 26,
+ 'samples_post': 20000,
+ 'samples_pre': 20000,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/letter-recognition/letter-recognition.data'}
+SAVED ALL TO: ./cd_data/letterrec 
+
+LIBRAS
+{'labels': 15,
+ 'samples_post': 360,
+ 'samples_pre': 360,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/libras/movement_libras.data'}
+SAVED ALL TO: ./cd_data/libras 
+
+MUSK
+{'labels': 2,
+ 'samples_post': 6598,
+ 'samples_pre': 6598,
+ 'url': 'https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Musk2.csv'}
+SAVED ALL TO: ./cd_data/musk 
+
+OPTDIGITS
+{'labels': 10,
+ 'samples_post': 3823,
+ 'samples_pre': 3823,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra'}
+SAVED ALL TO: ./cd_data/optdigits 
+
+PAGEBLOCKS
+{'labels': 5,
+ 'samples_post': 5473,
+ 'samples_pre': 5473,
+ 'url': 'https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/PageBlocks.csv'}
+SAVED ALL TO: ./cd_data/pageblocks 
+
+PENDIGITS
+{'labels': 10,
+ 'samples_post': 7494,
+ 'samples_pre': 7494,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra'}
+SAVED ALL TO: ./cd_data/pendigits 
+
+WBCO
+{'labels': 9,
+ 'samples_post': 683,
+ 'samples_pre': 699,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data'}
+SAVED ALL TO: ./cd_data/wbco 
+
+WINE
+{'labels': 3,
+ 'samples_post': 178,
+ 'samples_pre': 178,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data'}
+SAVED ALL TO: ./cd_data/wine 
+
+WINEQ_RED
+{'labels': 6,
+ 'samples_post': 1599,
+ 'samples_pre': 1599,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'}
+SAVED ALL TO: ./cd_data/wineq_red 
+
+Processed 18 datasets
