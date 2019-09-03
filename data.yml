@@ -15,7 +15,7 @@ bloodtrans:
         - "Time"
         - "Donated"
     label_col: "Donated"
-    output_args:
+    export_args:
         format: "%i"
 
 brtiss:
@@ -37,6 +37,8 @@ ecoli:
 
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+    export_args:
+        format: '%1.1f'
 
 isolet:
     # source: https://archive.ics.uci.edu/ml/datasets/ISOLET
