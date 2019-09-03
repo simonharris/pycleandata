@@ -35,6 +35,12 @@ ecoli:
         - 0
     label_col: 8
 
+glass:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/glass/glass.data"
+    import_args:
+        index_col: 0
+    label_col: 10
+
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
     export_args:
