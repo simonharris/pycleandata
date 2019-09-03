@@ -60,6 +60,9 @@ letterrec:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/letter-recognition/letter-recognition.data
     label_col: 0
 
+libras:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/libras/movement_libras.data"
+
 musk:
     # source: https://archive.ics.uci.edu/ml/datasets/Musk+%28Version+2%29
     data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Musk2.csv
