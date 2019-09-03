@@ -41,6 +41,9 @@ glass:
         index_col: 0
     label_col: 10
 
+haberman:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/haberman/haberman.data"
+
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
     export_args:
