@@ -44,6 +44,9 @@ glass:
 haberman:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/haberman/haberman.data"
 
+ionosphere:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/ionosphere/ionosphere.data"
+
 iris:
     data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
     export_args:
