@@ -89,7 +89,7 @@ pendigits:
 
 parkinsons:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data"
-    import_args: 
+    import_args:
         header: 0
         index_col: 0
     label_col: "status"
@@ -111,3 +111,11 @@ wineq_red:
         header: 0
         sep: ";"
     label_col: "quality"
+
+wineq_white:
+    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv
+    import_args:
+        header: 0
+        sep: ";"
+    label_col: "quality"
+
