@@ -74,21 +74,28 @@ musk:
         - 0
 
 optdigits:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra"
     export_args:
         format: '%i'
 
 pageblocks:
     # source: https://archive.ics.uci.edu/ml/datasets/Page+Blocks+Classification
-    data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/PageBlocks.csv
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/PageBlocks.csv"
 
 pendigits:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra"
     export_args:
         format: '%i'
 
+parkinsons:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data"
+    import_args: 
+        header: 0
+        index_col: 0
+    label_col: "status"
+
 wbco:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"
     import_args:
         na_values:
         - '?'
