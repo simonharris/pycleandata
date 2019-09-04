@@ -2,10 +2,10 @@
 
 avilatr:
     # source: https://archive.ics.uci.edu/ml/datasets/Avila
-    data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/AvilaTR.csv
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/AvilaTR.csv"
 
 bloodtrans:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/blood-transfusion/transfusion.data
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/blood-transfusion/transfusion.data"
     import_args:
         header: 0
         names:
@@ -20,14 +20,14 @@ bloodtrans:
 
 brtiss:
     # source: https://archive.ics.uci.edu/ml/datasets/Breast+Tissue
-    data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/BreastTissue.csv
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/BreastTissue.csv"
     import_args:
         header: 0
         index_col: 0
     label_col: "Class"
 
 ecoli:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/ecoli/ecoli.data
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/ecoli/ecoli.data"
     import_args:
         sep: "\\s+"
     export_args:
@@ -48,16 +48,16 @@ ionosphere:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/ionosphere/ionosphere.data"
 
 iris:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
     export_args:
         format: '%1.1f'
 
 isolet:
     # source: https://archive.ics.uci.edu/ml/datasets/ISOLET
-    data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Isolet1234.csv
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Isolet1234.csv"
 
 letterrec:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/letter-recognition/letter-recognition.data
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/letter-recognition/letter-recognition.data"
     label_col: 0
 
 libras:
@@ -65,7 +65,7 @@ libras:
 
 musk:
     # source: https://archive.ics.uci.edu/ml/datasets/Musk+%28Version+2%29
-    data_url: https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Musk2.csv
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Musk2.csv"
     import_args:
         index_col: 1
     label_col: 168
@@ -102,18 +102,18 @@ wbco:
         index_col: 0
 
 wine:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data"
     label_col: 0
 
 wineq_red:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv"
     import_args:
         header: 0
         sep: ";"
     label_col: "quality"
 
 wineq_white:
-    data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
     import_args:
         header: 0
         sep: ";"
