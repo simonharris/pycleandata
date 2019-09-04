@@ -103,6 +103,20 @@ PENDIGITS
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra'}
 SAVED ALL TO: ./cd_data/pendigits 
 
+PARKINSONS
+{'labels': 2,
+ 'samples_post': 195,
+ 'samples_pre': 195,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data'}
+SAVED ALL TO: ./cd_data/parkinsons 
+
+SONAR_ALL
+{'labels': 2,
+ 'samples_post': 208,
+ 'samples_pre': 208,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data'}
+SAVED ALL TO: ./cd_data/sonar_all 
+
 WBCO
 {'labels': 9,
  'samples_post': 683,
@@ -124,4 +138,18 @@ WINEQ_RED
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'}
 SAVED ALL TO: ./cd_data/wineq_red 
 
-Processed 18 datasets
+WINEQ_WHITE
+{'labels': 7,
+ 'samples_post': 4898,
+ 'samples_pre': 4898,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv'}
+SAVED ALL TO: ./cd_data/wineq_white 
+
+YEAST
+{'labels': 10,
+ 'samples_post': 1484,
+ 'samples_pre': 1484,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/yeast/yeast.data'}
+SAVED ALL TO: ./cd_data/yeast 
+
+Processed 22 datasets

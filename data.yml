@@ -122,3 +122,9 @@ wineq_white:
         sep: ";"
     label_col: "quality"
 
+yeast:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/yeast/yeast.data"
+    import_args:
+        index_col: 0
+        sep: "\\s+"
+    label_col: 9
