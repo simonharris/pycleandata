@@ -94,6 +94,9 @@ parkinsons:
         index_col: 0
     label_col: "status"
 
+sonar_all:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data"
+
 wbco:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"
     import_args:
