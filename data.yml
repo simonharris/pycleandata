@@ -106,6 +106,13 @@ vehicle:
     export_args:
         format: "%i"
 
+vertebral:
+    # Use the 3 cluster set, as per Arbelaitz 2013
+    # Source: https://archive.ics.uci.edu/ml/datasets/Vertebral+Column
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Vertebral3C.csv"
+    import_args:
+        sep: "\\s+"
+
 wbco:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"
     import_args:
