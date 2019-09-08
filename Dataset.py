@@ -15,11 +15,13 @@ DEBUG = False
 
 
 def debug(data):
+    """Prints things out"""
     if DEBUG:
         print(data)
 
 
 class Dataset:
+    """Main processor for datasets"""
 
     FORMAT_INT = '%i'
     FORMAT_FLT = '%f'
@@ -36,6 +38,9 @@ class Dataset:
             'labels': None,
         }
 
+        self._ds = None      # see self.fetch()
+        self._labels = None  # see self.process()
+
 
     def fetch(self):
         """Download, cache and parse file"""
@@ -50,11 +55,10 @@ class Dataset:
 
         self._ds = pd.read_csv(cache_file, **import_args)
 
-        # TODO: handle errors
         return True
 
 
-    def process(self): #, cleaner, labeller):
+    def process(self):
         """Data cleaning and label management"""
 
         self._info['samples_pre'] = self._ds.shape[0]
@@ -68,18 +72,18 @@ class Dataset:
 
         # Assume we always have labels...for now
         if 'label_col' in self._config:
-            lc = self._config['label_col']
+            label_col = self._config['label_col']
         else:
             # TODO: this doesn't work if you have an index column
             #   or have used 'usecols'. In those cases you currently
             #   have to explicitly specify a label_col
-            lc = self._ds.shape[1]-1
+            label_col = self._ds.shape[1]-1
 
-        debug(self._ds[lc])
+        debug(self._ds[label_col])
 
-        self._labels, _ = pd.factorize(self._ds[lc])
+        self._labels, _ = pd.factorize(self._ds[label_col])
         self._info['labels'] = len(np.unique(self._labels))
-        self._ds = self._ds.drop(lc, axis=1)
+        self._ds = self._ds.drop(label_col, axis=1)
 
         return True
 
@@ -99,7 +103,6 @@ class Dataset:
         else:
             fmt = self.FORMAT_FLT
 
-        # TODO: may need to handle other formats for output data
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
         np.savetxt(location + '/data.csv', self._ds, fmt=fmt, delimiter=',')
 
