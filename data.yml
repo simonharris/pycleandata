@@ -124,6 +124,11 @@ parkinsons:
 #        - "na"
 #    label_col: "class"
 
+skinseg:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00229/Skin_NonSkin.txt"
+    import_args:
+        sep: "\\s+"
+
 sonar_all:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data"
 
