@@ -134,7 +134,13 @@ vertebral:
     import_args:
         sep: "\\s+"
 
-wbco:
+wbcd: # diagnostic
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data"
+    import_args:
+        index_col: 0
+    label_col: 1
+
+wbco: # original
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"
     import_args:
         na_values:
