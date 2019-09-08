@@ -45,6 +45,7 @@ haberman:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/haberman/haberman.data"
 
 htru2:
+    # source: https://archive.ics.uci.edu/ml/datasets/HTRU2
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/HTRU2.csv"
 
 ionosphere:
@@ -58,6 +59,13 @@ iris:
 isolet:
     # source: https://archive.ics.uci.edu/ml/datasets/ISOLET
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Isolet1234.csv"
+
+leaf:
+    # Nb. the supplied Readme.pdf claims 40 class, whilst only 30 *representing
+    #     only simple leaves are included in the data
+    # source: https://archive.ics.uci.edu/ml/datasets/Leaf
+    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Leaf.csv"
+    label_col: 0
 
 letterrec:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/letter-recognition/letter-recognition.data"
@@ -96,6 +104,16 @@ parkinsons:
         header: 0
         index_col: 0
     label_col: "status"
+
+## Nb missing data in virtually all rows
+#scania:
+    # source: https://archive.ics.uci.edu/ml/datasets/IDA2016Challenge
+#    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/ScaniaTR.csv"
+#    import_args:
+#        header: 0
+#        na_values:
+#        - "na"
+#    label_col: "class"
 
 sonar_all:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data"
