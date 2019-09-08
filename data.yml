@@ -127,6 +127,9 @@ parkinsons:
 sonar_all:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data"
 
+spambase:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.data"
+
 vehicle:
     # Comes split into 9 files, for no obvious reason
     # source: https://archive.ics.uci.edu/ml/datasets/Statlog+%28Vehicle+Silhouettes%29
