@@ -6,7 +6,7 @@ import os
 import sys
 import yaml
 
-from Dataset import Dataset
+from dataset import Dataset
 
 
 DATA_DIR = './cd_data/'
