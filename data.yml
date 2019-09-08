@@ -124,6 +124,8 @@ parkinsons:
 #        - "na"
 #    label_col: "class"
 
+# Nb. claims to be univariate depsite 3 cols, since they represent the Red,
+#   Green and Blue (RGB) componenets of colours
 skinseg:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00229/Skin_NonSkin.txt"
     import_args:
