@@ -1,5 +1,7 @@
 # Main dataset config file
 
+# Purely continuous data ======================================================
+
 avilatr:
     # source: https://archive.ics.uci.edu/ml/datasets/Avila
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/AvilaTR.csv"
@@ -190,3 +192,16 @@ yeast:
         index_col: 0
         sep: "\\s+"
     label_col: 9
+
+# With categorical data =======================================================
+
+lenses:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/lenses/lenses.data"
+    import_args:
+        index_col: 0
+        sep: "\\s+"
+    label_col: 5
+    output_args:
+        format: "%i"
+
+
