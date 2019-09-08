@@ -54,7 +54,7 @@ ionosphere:
 iris:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
     export_args:
-        format: '%1.1f'
+        format: "%1.1f"
 
 isolet:
     # source: https://archive.ics.uci.edu/ml/datasets/ISOLET
@@ -74,6 +74,15 @@ letterrec:
 libras:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/libras/movement_libras.data"
 
+lungcancer:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/lung-cancer/lung-cancer.data"
+    import_args:
+        na_values:
+        - "?"
+    label_col: 0
+    output_args:
+        format: "%i"
+
 musk:
     # source: https://archive.ics.uci.edu/ml/datasets/Musk+%28Version+2%29
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Musk2.csv"
@@ -87,7 +96,7 @@ musk:
 optdigits:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra"
     export_args:
-        format: '%i'
+        format: "%i"
 
 pageblocks:
     # source: https://archive.ics.uci.edu/ml/datasets/Page+Blocks+Classification
@@ -96,7 +105,7 @@ pageblocks:
 pendigits:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra"
     export_args:
-        format: '%i'
+        format: "%i"
 
 parkinsons:
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data"
