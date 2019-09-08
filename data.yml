@@ -204,4 +204,5 @@ lenses:
     output_args:
         format: "%i"
 
-
+teachassteval:
+    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/tae/tae.data"

@@ -131,12 +131,26 @@ PARKINSONS
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/parkinsons/parkinsons.data'}
 SAVED ALL TO: ./cd_data/parkinsons 
 
+SKINSEG
+{'labels': 2,
+ 'samples_post': 245057,
+ 'samples_pre': 245057,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/00229/Skin_NonSkin.txt'}
+SAVED ALL TO: ./cd_data/skinseg 
+
 SONAR_ALL
 {'labels': 2,
  'samples_post': 208,
  'samples_pre': 208,
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data'}
 SAVED ALL TO: ./cd_data/sonar_all 
+
+SPAMBASE
+{'labels': 2,
+ 'samples_post': 4601,
+ 'samples_pre': 4601,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/spambase/spambase.data'}
+SAVED ALL TO: ./cd_data/spambase 
 
 VEHICLE
 {'labels': 4,
@@ -194,4 +208,18 @@ YEAST
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/yeast/yeast.data'}
 SAVED ALL TO: ./cd_data/yeast 
 
-Processed 28 datasets
+LENSES
+{'labels': 3,
+ 'samples_post': 24,
+ 'samples_pre': 24,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/lenses/lenses.data'}
+SAVED ALL TO: ./cd_data/lenses 
+
+TEACHASSTEVAL
+{'labels': 3,
+ 'samples_post': 151,
+ 'samples_pre': 151,
+ 'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/tae/tae.data'}
+SAVED ALL TO: ./cd_data/teachassteval 
+
+Processed 32 datasets
