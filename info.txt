@@ -26,6 +26,13 @@ ECOLI
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/ecoli/ecoli.data'}
 SAVED ALL TO: ./cd_data/ecoli 
 
+FOSSIL
+{'labels': 3,
+ 'samples_post': 87,
+ 'samples_pre': 87,
+ 'url': 'https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/ChernoffFossil.csv'}
+SAVED ALL TO: ./cd_data/fossil 
+
 GLASS
 {'labels': 6,
  'samples_post': 214,
@@ -222,4 +229,4 @@ TEACHASSTEVAL
  'url': 'https://archive.ics.uci.edu/ml/machine-learning-databases/tae/tae.data'}
 SAVED ALL TO: ./cd_data/teachassteval 
 
-Processed 32 datasets
+Processed 33 datasets
