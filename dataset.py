@@ -35,7 +35,8 @@ class Dataset:
             'url': self._config['data_url'],
             'samples_pre': None,
             'samples_post': None,
-            'labels': None,
+            'num_labels': None,
+            'name': self._config['name'],
         }
 
         self._ds = None      # see self.fetch()
@@ -82,7 +83,7 @@ class Dataset:
         debug(self._ds[label_col])
 
         self._labels, _ = pd.factorize(self._ds[label_col])
-        self._info['labels'] = len(np.unique(self._labels))
+        self._info['num_labels'] = len(np.unique(self._labels))
         self._ds = self._ds.drop(label_col, axis=1)
 
         return True
@@ -106,9 +107,13 @@ class Dataset:
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
         np.savetxt(location + '/data.csv', self._ds, fmt=fmt, delimiter=',')
 
+        self._info['num_features'] = self._ds.shape[1]
+
         pprint(self._info)
 
         print("SAVED ALL TO:", location, "\n")
+
+        return self._info
 
 
     def _fetch_import_args(self):

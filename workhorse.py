@@ -2,7 +2,9 @@
 Main script for importing databases to cleandata
 """
 
+import csv
 import os
+from pprint import pprint
 import sys
 import yaml
 
@@ -24,7 +26,15 @@ def import_dataset(key, conf):
 
     # try/catch etc
     if (ds.fetch() and ds.process()):
-        ds.save_all(newdir)
+        info = ds.save_all(newdir)
+
+        all_info.append([info['name'],
+                         info['samples_post'],
+                         info['num_features'],
+                         info['num_labels'],
+                         ]
+                        )
+
     else:
         print("ERROR")
 
@@ -35,6 +45,7 @@ def import_dataset(key, conf):
 if __name__ == "__main__":
 
     dst = None
+    all_info = []
 
     # TODO: this is kind of hacky
     if len(sys.argv) > 1:
@@ -58,3 +69,10 @@ if __name__ == "__main__":
             print(exc)
 
     print("Processed %i datasets" % (cnt))
+    all_info = sorted(all_info, key=lambda x: x[0])
+    all_info = [['name', 'objects', 'features', 'classes']] + all_info
+    pprint(all_info)
+
+    with open("realworld.csv", "w") as f:
+        writer = csv.writer(f)
+        writer.writerows(all_info)
