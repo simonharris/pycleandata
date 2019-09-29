@@ -1,6 +1,6 @@
 liac-arff
 numpy
-scipy
-sklearn
 pandas
 pyyaml
+scikit-learn
+scipy

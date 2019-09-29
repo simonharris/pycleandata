@@ -6,5 +6,4 @@ clean:
 
 init:
 	git pull
-	pip install -qr requirements.txt
-
+	pip install -r requirements.txt
