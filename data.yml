@@ -177,14 +177,14 @@ vertebral:
         sep: "\\s+"
 
 wbcd: # diagnostic
-    name: "WI Breast Cancer (Diagnostic)"
+    name: "Breast Cancer (Diag.)"
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data"
     import_args:
         index_col: 0
     label_col: 1
 
 wbco: # original
-    name: "WI Breast Cancer (Original)"
+    name: "Breast Cancer (Orig.)"
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data"
     import_args:
         na_values:

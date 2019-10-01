@@ -1,6 +1,8 @@
 name,objects,features,classes
 Avila,10430,10,12
 Blood Transfusion,748,4,2
+Breast Cancer (Diag.),569,30,2
+Breast Cancer (Orig.),683,9,9
 Breast Tissue,106,9,6
 Ecoli,336,7,8
 Fossil,87,6,3
@@ -23,8 +25,6 @@ Sonar all,208,60,2
 Spambase,4601,57,2
 Vehicle Silhouettes,846,18,4
 Vertebral Column,310,6,3
-WI Breast Cancer (Diagnostic),569,30,2
-WI Breast Cancer (Original),683,9,9
 Wine,178,13,3
 Wine Quality (Red),1599,11,6
 Wine Quality (White),4898,11,7
