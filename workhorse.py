@@ -57,9 +57,11 @@ if __name__ == "__main__":
 
             cnt = 0
 
+            # if a single dataset is specified
             if dst is not None:
                 import_dataset(dst, cnf[dst])
                 cnt = 1
+            # else import the lot
             else:
                 for dst in cnf:
                     import_dataset(dst, cnf[dst])
