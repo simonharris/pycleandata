@@ -26,7 +26,7 @@ def import_dataset(key, conf):
 
     # try/catch etc
     if (ds.fetch() and ds.process()):
-        info = ds.save_all(newdir)
+        info = ds.save_all(newdir, True)
 
         all_info.append([info['name'],
                          info['samples_post'],

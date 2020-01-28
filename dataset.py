@@ -8,9 +8,10 @@ import urllib.request
 
 import numpy as np
 import pandas as pd
+from sklearn import preprocessing
 
 
-DEBUG = True
+# DEBUG = True
 DEBUG = False
 
 
@@ -42,7 +43,6 @@ class Dataset:
         self._ds = None      # see self.fetch()
         self._labels = None  # see self.process()
 
-
     def fetch(self):
         """Download, cache and parse file"""
 
@@ -57,7 +57,6 @@ class Dataset:
         self._ds = pd.read_csv(cache_file, **import_args)
 
         return True
-
 
     def process(self):
         """Data cleaning and label management"""
@@ -88,8 +87,7 @@ class Dataset:
 
         return True
 
-
-    def save_all(self, location):
+    def save_all(self, location, standardise=True):
         """Save data files to disk"""
 
         export_args = self._fetch_export_args()
@@ -104,6 +102,9 @@ class Dataset:
         else:
             fmt = self.FORMAT_FLT
 
+        if standardise:
+            self._ds = preprocessing.scale(self._ds)
+
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
         np.savetxt(location + '/data.csv', self._ds, fmt=fmt, delimiter=',')
 
@@ -114,7 +115,6 @@ class Dataset:
         print("SAVED ALL TO:", location, "\n")
 
         return self._info
-
 
     def _fetch_import_args(self):
         """Fetch import_args from config file"""
@@ -141,7 +141,6 @@ class Dataset:
                     kwargs[setting] = self._config['import_args'][setting]
 
         return kwargs
-
 
     def _fetch_export_args(self):
 
