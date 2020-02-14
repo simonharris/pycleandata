@@ -8,7 +8,6 @@ import urllib.request
 
 import numpy as np
 import pandas as pd
-from sklearn import preprocessing
 
 
 # DEBUG = True
@@ -103,7 +102,7 @@ class Dataset:
             fmt = self.FORMAT_FLT
 
         if standardise:
-            self._ds = preprocessing.scale(self._ds)
+            self._ds = self._stddise(self._ds)
 
         np.savetxt(location + '/labels.csv', self._labels, fmt=self.FORMAT_INT)
         np.savetxt(location + '/data.csv', self._ds, fmt=fmt, delimiter=',')
@@ -148,3 +147,16 @@ class Dataset:
             return self._config['export_args']
 
         return []
+
+    @staticmethod
+    def _stddise(matrix):
+        """Standardise as per above comment"""
+
+        matrix = np.array(matrix)
+
+        debug(np.sum(matrix, axis=0))
+
+        std = (matrix - matrix.mean(axis=0)) / \
+            (matrix.max(axis=0) - matrix.min(axis=0))
+
+        return std
