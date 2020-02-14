@@ -14,6 +14,9 @@ ISOLET:
  - 6238x617 - 26cl (alphabet)
  - scaled -1 to 1
 
+OPT DIGITS:
+ - cols 0 and 39 are just zeroes, so are dropped
+
 WBCO:
  * c.16 rows with missing data. Seem to general be dropped
 

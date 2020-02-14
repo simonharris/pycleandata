@@ -123,10 +123,15 @@ musk2:
         dropcols:
         - 0
 
+# We need labels, so use the training set of 3,823 instances
 optdigits:
     name: "Optical Recognition" #  of Handwritten Digits"
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra"
     export_args:
+        # These two are just all zeros
+        dropcols:
+        - 0
+        - 39
         format: "%i"
 
 pageblocks:
