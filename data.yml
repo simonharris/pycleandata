@@ -19,8 +19,6 @@ bloodtrans:
         - "Time"
         - "Donated"
     label_col: "Donated"
-    export_args:
-        format: "%i"
 
 brtiss:
     name: "Breast Tissue"
@@ -45,8 +43,6 @@ fossil:
     name: "Fossil"
     # source: by email from Anderson
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/ChernoffFossil.csv"
-    export_args:
-        format: "%i"
 
 glass:
     name: "Glass"
@@ -71,8 +67,6 @@ ionosphere:
 iris:
     name: "Iris"
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
-    export_args:
-        format: "%1.1f"
 
 leaf:
     name: "Leaf"
@@ -98,8 +92,6 @@ lungcancer:
         na_values:
         - "?"
     label_col: 0
-    output_args:
-        format: "%i"
 
 musk1:
     name: "Musk 1"
@@ -132,7 +124,6 @@ optdigits:
         dropcols:
         - 0
         - 39
-        format: "%i"
 
 pageblocks:
     name: "Page Blocks"
@@ -142,8 +133,6 @@ pageblocks:
 pendigits:
     name: "Pen-Based Recognition" #  of Handwritten Digits"
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/pendigits/pendigits.tra"
-    export_args:
-        format: "%i"
 
 parkinsons:
     name: "Parkinsons"
@@ -176,8 +165,6 @@ vehicle:
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Vehicle.csv"
     import_args:
         sep: "\\s+"
-    export_args:
-        format: "%i"
 
 vertebral:
     name: "Vertebral Column"
@@ -239,8 +226,6 @@ yeast:
 #        index_col: 0
 #        sep: "\\s+"
 #    label_col: 5
-#    output_args:
-#        format: "%i"
 
 #teachassteval:
 #    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/tae/tae.data"

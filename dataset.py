@@ -96,10 +96,13 @@ class Dataset:
             for col in export_args['dropcols']:
                 self._ds = self._ds.drop(col, axis=1)
 
-        if 'format' in export_args:
-            fmt = export_args['format']
-        else:
-            fmt = self.FORMAT_FLT
+        # if 'format' in export_args:
+        #     fmt = export_args['format']
+        # else:
+        #     fmt = self.FORMAT_FLT
+
+        # Once standardised it will always be a float
+        fmt = self.FORMAT_FLT
 
         if standardise:
             self._ds = self._stddise(self._ds)
