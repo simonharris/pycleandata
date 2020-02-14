@@ -156,6 +156,7 @@ class Dataset:
 
         debug(np.sum(matrix, axis=0))
 
+        # TODO: fix the glaring division by 0 bug
         std = (matrix - matrix.mean(axis=0)) / \
             (matrix.max(axis=0) - matrix.min(axis=0))
 
