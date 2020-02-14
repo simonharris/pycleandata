@@ -74,11 +74,6 @@ iris:
     export_args:
         format: "%1.1f"
 
-isolet:
-    name: "ISOLET"
-    # source: https://archive.ics.uci.edu/ml/datasets/ISOLET
-    data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Isolet1234.csv"
-
 leaf:
     name: "Leaf"
     # Nb. the supplied Readme.pdf claims 40 class, whilst only 30 *representing
