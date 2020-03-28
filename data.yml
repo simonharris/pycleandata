@@ -188,6 +188,7 @@ wbco: # original
         na_values:
         - '?'
         index_col: 0
+    label_col: 10
 
 wine:
     name: "Wine"

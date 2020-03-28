@@ -2,7 +2,7 @@ name,objects,features,classes
 Avila,10430,10,12
 Blood Transfusion,748,4,2
 Breast Cancer (Diag.),569,30,2
-Breast Cancer (Orig.),683,9,9
+Breast Cancer (Orig.),683,9,2
 Breast Tissue,106,9,6
 Ecoli,336,7,8
 Fossil,87,6,3
