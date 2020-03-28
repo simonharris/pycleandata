@@ -51,6 +51,7 @@ class Dataset:
             urllib.request.urlretrieve(self._config['data_url'], cache_file)
 
         import_args = self._fetch_import_args()
+
         debug(import_args)
 
         self._ds = pd.read_csv(cache_file, **import_args)
@@ -76,6 +77,15 @@ class Dataset:
             # TODO: this doesn't work if you have an index column
             #   or have used 'usecols'. In those cases you currently
             #   have to explicitly specify a label_col
+
+            # NB: haven't used usecols anywhere
+
+            import_args = self._fetch_import_args()
+            print(import_args)
+
+            if import_args['index_col'] is not False:
+                raise Exception('Need a label_col if using index_col')
+
             label_col = self._ds.shape[1]-1
 
         debug(self._ds[label_col])
