@@ -1,4 +1,5 @@
 # Main dataset config file
+# Main dataset config file
 
 # Purely continuous data ======================================================
 
@@ -95,7 +96,7 @@ libras:
 
 musk1:
     name: "Musk 1"
-    # source: https://archive.ics.uci.edu/ml/datasets/Musk+%28Version+2%29
+    # source: https://archive.ics.uci.edu/ml/datasets/Musk+%28Version+1%29
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Musk1.csv"
     import_args:
         index_col: 1
