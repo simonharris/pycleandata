@@ -12,6 +12,7 @@ from dataset import Dataset
 
 
 DATA_DIR = './cd_data/'
+REPORT_FILE = 'cd_report.csv'
 
 
 def import_dataset(key, conf):
@@ -51,7 +52,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         dst = sys.argv[1]
 
-    with open("data.yml", 'r') as stream:
+    with open("data.yml", "r") as stream:
         try:
             cnf = yaml.load(stream, Loader=yaml.SafeLoader)
 
@@ -75,6 +76,6 @@ if __name__ == "__main__":
     all_info = [['name', 'objects', 'features', 'classes']] + all_info
     pprint(all_info)
 
-    with open("realworld.csv", "w") as f:
+    with open(REPORT_FILE, "w") as f:
         writer = csv.writer(f)
         writer.writerows(all_info)

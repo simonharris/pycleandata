@@ -1,6 +1,3 @@
-liac-arff
 numpy
 pandas
 pyyaml
-scikit-learn
-scipy

@@ -1,8 +1,14 @@
 go:
-	@python workhorse.py
+	@python cleandata.py
 
-clean:
+cacheclean:
 	rm -f _cache/*
+
+dataclean:
+	rm -rf cd_data/*
+
+distclean: cacheclean dataclean
+	rm -f cd_report.csv
 
 init:
 	git pull
