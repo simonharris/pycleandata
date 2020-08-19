@@ -1,7 +1,4 @@
 # Main dataset config file
-# Main dataset config file
-
-# Purely continuous data ======================================================
 
 avilatr:
     name: "Avila"
@@ -61,18 +58,14 @@ htru2:
     # source: https://archive.ics.uci.edu/ml/datasets/HTRU2
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/HTRU2.csv"
 
-#ionosphere:
-#    name: "Ionosphere"
-#    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/ionosphere/ionosphere.data"
-
 iris:
     name: "Iris"
     data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 
 leaf:
     name: "Leaf"
-    # Nb. the supplied Readme.pdf claims 40 class, whilst only 30 *representing
-    #     only simple leaves are included in the data
+    # Nb. the supplied Readme.pdf claims 40 classes, whilst only 30 representing
+    #     simple leaves are included in the data
     # source: https://archive.ics.uci.edu/ml/datasets/Leaf
     data_url: "https://raw.githubusercontent.com/simonharris/cleandata/master/offline_data/Leaf.csv"
     label_col: 0
@@ -142,13 +135,6 @@ parkinsons:
         header: 0
         index_col: 0
     label_col: "status"
-
-# Nb. claims to be univariate depsite 3 cols, since they represent the Red,
-#   Green and Blue (RGB) components of colours
-#skinseg:
-#    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/00229/Skin_NonSkin.txt"
-#    import_args:
-#        sep: "\\s+"
 
 sonar_all:
     name: "Sonar all"
@@ -220,14 +206,3 @@ yeast:
         sep: "\\s+"
     label_col: 9
 
-# With categorical data =======================================================
-
-#lenses:
-#    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/lenses/lenses.data"
-#    import_args:
-#        index_col: 0
-#        sep: "\\s+"
-#    label_col: 5
-
-#teachassteval:
-#    data_url: "https://archive.ics.uci.edu/ml/machine-learning-databases/tae/tae.data"
