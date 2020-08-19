@@ -13,5 +13,6 @@ Retrieve and clean datasets for use in machine learning experiments.
  - specify config file as command-line option
  - ...and place output in a subdirectory of output/ named after it
  - add a suitable license
+ - more flexibility regarding normalisation (and remove the term standardisation)
 
 
