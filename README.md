@@ -1,4 +1,4 @@
-# cleandata
+# pycleandata
 
 Retrieve and clean datasets for use in machine learning experiments.
 
