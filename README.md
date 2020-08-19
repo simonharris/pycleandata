@@ -4,7 +4,20 @@ Retrieve and clean datasets for use in machine learning experiments.
 
 ## Usage
 
-``$ python3 workhorse.py <dataset_key>``
+To process all configured data sets:
+
+``$ python3 cleandata.py``
+
+Or to specify a single data set using the key from ``data.yml``:
+
+``$ python3 cleandata.py <dataset_key>``
+
+## Requirements
+
+ - Python 3
+ - numpy
+ - pandas
+ - PyYAML
 
 ## Future work
 
