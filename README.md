@@ -1,6 +1,6 @@
 # pycleandata
 
-Retrieve and clean datasets for use in machine learning experiments.
+Retrieve and clean data sets for use in machine learning experiments.
 
 ## Usage
 
